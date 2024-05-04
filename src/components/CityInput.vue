@@ -46,14 +46,14 @@ export default {
     },
     methods: {
         inputHandler(event){
-            const value = event.target.value
-            if(value.length >= 3){
-                this.callback(value)
-            }
-        },
+          const value = event.target.value
+          this.updateCityValueState(value)
+          if(value.length >= 3){
+          this.callback(value)
+        }
+    },
         chooseCityHandler(e){
-           const cityName = this.chooseCityCallback(e.currentTarget.id)
-           console.log('user choose', cityName)
+           const cityName = this.chooseCityCallback(e.currentTarget.id)          
            this.updateCityValueState(cityName)
         }
     },
@@ -74,7 +74,7 @@ export default {
   padding: 16px
   font-family: 'Inter', Arial, sans-serif
   color: $white
-  background-color: rgba(56, 57, 118, 0.75)
+  background-color: $card-extra
   border-radius: 16px
   border: none
   outline: none
@@ -88,8 +88,7 @@ export default {
     top: 120px
     width: 100%   
     z-index:10
-    background: url('/src/assets/img/gradient-2.jpg') no-repeat 50% 50%
-    background-size: cover
+    background: radial-gradient(circle at center, $blue 0%, $darkblue 100%)
     border-radius: 8px
     padding: 10px
 
@@ -97,7 +96,7 @@ export default {
     display: flex
     align-items: center
     column-gap: 10px
-
+   
 .city
     padding:0
     margin: 0

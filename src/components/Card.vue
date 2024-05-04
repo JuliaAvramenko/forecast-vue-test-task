@@ -30,8 +30,7 @@ export default {
   justify-content: center
   min-height: 30px
   padding: 10px
-  background: url('/src/assets/img/gradient-2.jpg') no-repeat 50% 50%
-  background-size: cover
+  background: radial-gradient(circle at center, $card-extra 0%, $card-main 100%)
   border-radius: 8px
   width: 140px
 

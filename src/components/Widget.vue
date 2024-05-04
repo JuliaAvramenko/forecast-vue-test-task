@@ -8,7 +8,6 @@ import { provide, ref } from 'vue';
 
 const cityValueState = ref('');
 const updateCityValueState = (newValue) => {
-    console.log('i change value',cityValueState.value, newValue )
     cityValueState.value = newValue
 };
 provide('cityValueKey', {

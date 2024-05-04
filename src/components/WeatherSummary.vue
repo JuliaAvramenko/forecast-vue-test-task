@@ -29,9 +29,6 @@ export default {
     city: String,
     country: String,
 
-  }, 
-  data() {
-
   }
 }
 </script>
